@@ -15,7 +15,10 @@ function function1() {
         method: "GET"
       }).then(function(response) {
           //now we will dynamically create our storage div, get the rating, get a couple gif URLs
-      }
+          console.log(response);
+          //let's see if its workign
+          
+      });
 
 }
 //then, i'll need a function to render the buttons themselves. these will be dynamically created and loaded which should be less work than hardcoding them. in this, i'll delete the current contents every time, then run a for loop based on the length of the array of wheels and i'll use jQuery to create new buttons for every string in the array, and give it some specifc attributes 
