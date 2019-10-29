@@ -17,12 +17,24 @@ function function1() {
           //now we will dynamically create our storage div, get the rating, get a couple gif URLs
           console.log(response);
           //let's see if its workign
-          
+
       });
 
 }
 //then, i'll need a function to render the buttons themselves. these will be dynamically created and loaded which should be less work than hardcoding them. in this, i'll delete the current contents every time, then run a for loop based on the length of the array of wheels and i'll use jQuery to create new buttons for every string in the array, and give it some specifc attributes 
 function function2() {
+    //empty it first. first time, every time. i don't want old stuff piling up in a wierd way.
+    $("#buttonDisplay").empty();
+    //now a for loop for the wheels array
+    for (var i = 0; i < wheels.length; i++) {
+        var venom = $("<button>");
+        //^create a button. then give it an attribute and some text
+        venom.addClass("wbutton");
+        venom.attr("data-name", wheels[i]);
+        venom.text(wheels[i]);
+        //now add em to the html
+        $("#buttonDisplay").append(venom);
+    }
 
 }
 //then, i need a function that will create new buttons when the "submit" button is clicked. basically it will create a button, add a data attribute, and display the input from the textbox. then ill re-run the function to render buttons.
