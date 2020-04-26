@@ -59,7 +59,7 @@ function createButtons() {
   $("#buttonDisplay").empty();
   for (var i = 0; i < starterArray.length; i++) {
     var button = $("<button>");
-    button.addClass("namedButton");
+    button.addClass("namedButton btn btn-outline-info");
     button.attr("data-name", starterArray[i]);
     button.text(starterArray[i]);
     //now append em to the div

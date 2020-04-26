@@ -12,12 +12,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>gif-tastic!</title>
+    <title>gifTastic!</title>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#"><em>GifTastic!</em></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -37,34 +37,52 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a
+              class="nav-link"
+              href="https://github.com/MagicalPowers/GifTastic"
+              >Repository</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+          <li class="nav-item">
+            <a class="nav-link" href="https://en.wikipedia.org/wiki/GIF"
+              >Learn More...</a
             >
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
           </li>
         </ul>
       </div>
     </nav>
     <div class="container">
-      <div class="row" id="buttonDisplay">there is nothing here!!</div>
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Button group with nested dropdown"
+        id="buttonDisplay"
+      >
+        <button type="button" class="btn btn-secondary">1</button>
+        <button type="button" class="btn btn-secondary">2</button>
+
+        <div class="btn-group" role="group">
+          <button
+            id="btnGroupDrop1"
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </button>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a class="dropdown-item" href="#">Dropdown link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="buttonDisplay">there is nothing here!</div>
       <div class="row">
         <div class="col-8" id="gifDump">this is the gif dumping ground</div>
         <form class="col-4" id="inputArea">
@@ -82,8 +100,9 @@
       </div>
     </div>
 
-    <!--this should link to Google's CDN to retrieve the jQuery library-->
+    <!--Link to Google's CDN to retrieve the jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--and this script is some fantastic work by me-->
     <script src="assets/javascript/app.js"></script>
   </body>
